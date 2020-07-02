@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.time.Period;
+
 import boardgame.Piece;
 
 public class Board {
@@ -38,7 +40,10 @@ public class Board {
 		return pieces[position.getRow()][position.getColumn()];
 	}
 	
-	
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position;
+	}
 	
 	
 }
